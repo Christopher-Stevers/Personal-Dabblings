@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Ration Cost Calculator</title>
+    <link rel="stylesheet" href="Ration.css">
+    <script type="text/javascript" src="Ration.js"></script>
+</head>
+<body>
+    <header>
+      <h1>Cost of Feed Calculator based on Ration and kgs of Premix used.</h1>
+    </header>
+    <main>
+      <section>
+        <form id="first-form">
+          <div class="form">
+            <p> <label for="premixInput">Kgs of Premix/batch:</label>
+              <input class="form-css" type="text" id="premixInput" oninput="costBatch()" required/></p>
+            <p><label for="opbInput">Kgs of OPB/batch:</label>
+              <input class="form-css" type="text" id="opbInput" oninput="costBatch()" /></p>
+            <p><label for="cornInput">Kgs of Corn/batch:</label>
+              <input class="form-css" type="text" id="cornInput" oninput="costBatch()" /></p>
+            <p> <label for="soyInput">Kgs of Soy/batch:</label>
+              <input class="form-css" type="text" id="soyInput" oninput="costBatch()" /></p>
+  
+            <p> <label for="speltInput">Kgs of Spelt/batch:</label>
+              <input class="form-css" type="text" id="speltInput" oninput="costBatch()" /></p>
+  
+            <p> <label for="totalPremixInput">Total Premix used(Kgs):</label>
+              <input class="form-css" type="text" id="totalPremixInput" oninput="costBatch()" /></p>
+  
+          </div>
+          <div class="form">
+            <p> <label for="costOfOPB">Cost of OPB/tonne:</label>
+              <input class="form-css" type="text" id="costOfOPB" oninput="costBatch()" /></p>
+            <p><label for="costOfCorn">Cost of Corn/tonne:</label>
+              <input class="form-css" type="text" id="costOfCorn" oninput="costBatch()" /></p>
+            <p><label for="costOfSoy">Cost of Soy/tonne:</label>
+              <input class="form-css" type="text" id="costOfSoy" oninput="costBatch()" /></p>
+            <p><label for="costOfSpelt">Cost of Spelt/tonne:</label>
+              <input class="form-css" type="text" id="costOfSpelt" oninput="costBatch()" /></p>
+            <p><label for="premixCostInput">Cost of Premix/tonne:</label>
+              <input class="form-css" type="text" id="premixCostInput" oninput="costBatch()" /></p>
+            
+  
+          </div>
+          <div class="form">
+  
+          </div>
+        </form>
+      </section>
+  
+      <section>
+        <div class="form">
+  
+          <p> <label for="totalFeedCost">Total feed cost for ration:</label>
+            <output class="form-css" name="totalFeedCost" id="totalFeedCost"></output></p>
+        </div>
+      </section>
+    </main>
+  </body>
