@@ -47,6 +47,8 @@ li {
 #St-Hyacinth {
   float: right;
   position: -200px;
+  width: 40%;
+  max-width: 275px;
 }
 p.article {
   text-indent: 30px;
