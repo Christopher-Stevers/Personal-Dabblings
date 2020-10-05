@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent; /*Thanks stack overflow*/
+
+}
+
+:root {
+    --main-bg-color: #661C31;
+    --header-color: #90A7AD;
+    --bottom-head-bg: white;
+    --bottom-head-color: #4c5b5e;
+}
+
+body {
+    display: stretch;
+    grid-template-rows: 100vh repeat(auto);
+    align-items: center;
+    justify-items: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    display: grid;
+    grid-template-rows: 55vh 15vh 15vh 15vh;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--main-bg-color);
+    font-family: 'Montserrat', sans-serif;
+    color: var(--header-color);
+    overflow: visible;
+}
+
+h1 {
+    font-size: clamp(10px, 9vw, 90px);
+    text-align: center;
+    width: 100vw;
+    height: 55vh;
+    line-height: 55vh;
+}
+
+h2 {
+    font-size: clamp(8px, 5vw, 45px);
+    height: 15vh;
+    text-align: center;
+    width: 100vw;
+    margin: 0px;
+    line-height: 15vh;
+}
+
+h2.bottom {
+    background-color: var(--bottom-head-bg);
+    color: var(--bottom-head-color);
+    text-align: center;
+}
+
+nav {
+    position: fixed;
+    margin: 0px;
+}
+
+.nav-links {
+    color: var(--main-bg-color);
+    text-decoration: none;
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+}
+
+ul {
+        list-style: none;
+    
+    background-color: var(--header-color);
+    display: grid;
+    grid-template-rows: repeat(30px);
+    align-items: center;
+    justify-items: center;
+    
+}
+
+svg {
+    position: relative;
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 45px;
+    height: 45px;
+}
+
+svg:hover {
+    cursor: pointer;
+}
+#menu{visibility: hidden;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: var(--header-color);
+    width: 150px;
+padding-bottom: 35px;}
