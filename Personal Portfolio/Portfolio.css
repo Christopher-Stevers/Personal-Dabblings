@@ -2,13 +2,13 @@
 * {
     box-sizing: border-box;
     margin: 0;
-        padding: 0;
-        border: 0;
-        outline: 0;
-        font-size: 100%;
-        vertical-align: baseline;
-        background: transparent; /*Thanks stack overflow*/
-
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    /*Thanks stack overflow*/
 }
 
 :root {
@@ -41,7 +41,7 @@ header {
 }
 
 h1 {
-    font-size: clamp(10px, 9vw, 90px);
+    font-size: clamp(3rem, 8vw, 4rem);
     text-align: center;
     width: 100vw;
     height: 55vh;
@@ -49,7 +49,8 @@ h1 {
 }
 
 h2 {
-    font-size: clamp(8px, 5vw, 45px);
+    font-size: clamp(2rem, 4vw, 4rem);
+    ;
     height: 15vh;
     text-align: center;
     width: 100vw;
@@ -72,36 +73,45 @@ nav {
     color: var(--main-bg-color);
     text-decoration: none;
     font-family: Raleway, sans-serif;
-    font-weight: 700;
+    font-weight: 600;
 }
 
-ul {
-        list-style: none;
-    
+div.menu-items {
     background-color: var(--header-color);
     display: grid;
-    grid-template-rows: repeat(30px);
+    grid-template-rows: 60px 60px 60px;
+    margin: 0px 25px 0px 25px;
+    grid-template-columns: 15vw;
     align-items: center;
     justify-items: center;
-    
 }
 
-svg {
-    position: relative;
-    padding-top: 10px;
-    padding-left: 10px;
-    width: 45px;
-    height: 45px;
-    overflow: visible;
+@media screen and (max-width: 900px) {
+    div.menu-items {
+        grid-template-columns: minmax(100px, 15vw) minmax(100px, 10vw) minmax(100px, 10vw);
+        grid-template-rows: 30px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    div.menu-items {
+        grid-template-columns: 100vw;
+        grid-template-rows: 1fr 1fr 1fr;
+        height: 100vh;
+        margin: 0px;
+    }
 }
 
 svg:hover {
     cursor: pointer;
 }
-#menu{visibility: hidden;
+
+#menu {
+    visibility: hidden;
     position: fixed;
     top: 0px;
     left: 0px;
     background-color: var(--header-color);
-    width: 150px;
-padding-bottom: 35px;}
+    padding-bottom: 35px;
+    box-shadow: var(--header-color) 0px 0px 1px 1px;
+}
