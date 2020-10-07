@@ -127,13 +127,13 @@ main {
     height: 270vh;
     width: 100%;
     display: grid;
-    grid-template-rows: 70vh 90vh 90vh;
+    grid-template-rows: minmax(350px, 70vh) 90vh 90vh;
     background-color: white;
 }
 
 #tech-page {
     display: grid;
-    grid-template-rows: 30vh 30vh;
+    grid-template-rows: minmax(250px, 30vh) minmax(100px, 30vh) ;
     grid-template-columns: 30vw 30vw 30vw;
     justify-items: center;
     justify-content: center;
@@ -165,7 +165,21 @@ img {
 }
 
 #me-page {
-    background-color: var(--main-bg-color);
+    display: grid;
     height: 100vh;
-    width: 100vw;
+    grid-template-rows: 15vh 85vh;
+    grid-template-columns: 90vw;
+    justify-items: center;
+    justify-content: center;
+    align-content: stretch;
+    object-fit: contain;
+background-color: var(--main-bg-color);
 }
+    
+
+.about-me{justify-self: center;
+    color: var(--header-color);
+    font-family: Raleway, sans-serif;
+    font-weight: 400;
+    font-size: clamp(1em, 3vw, 1.75em);}
+    p{padding: 20px;}
