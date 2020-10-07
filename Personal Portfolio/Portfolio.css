@@ -58,20 +58,15 @@ h2 {
     line-height: 15vh;
     font-family: 'Montserrat', sans-serif;
 }
-
-h2.bottom {
-    background-color: var(--bottom-head-bg);
-    text-align: center;
-}
-
 .body-link {
-    color: var(--header-color);
     text-decoration: none;
 }
 
-.body-link:hover {
-    color: var(--main-bg-color)
+#tech {
+    
+    color: var(--bottom-head-color);
 }
+#tech-head{background-color: var(--bottom-head-bg);}
 
 nav {
     position: fixed;
@@ -136,7 +131,7 @@ main {
     background-color: white;
 }
 
-.tech-page {
+#tech-page {
     display: grid;
     grid-template-rows: 30vh 30vh;
     grid-template-columns: 30vw 30vw 30vw;
@@ -160,9 +155,16 @@ section.programming-skills {
 img {
     width: 10vw;
 }
-#me{color: color: var(--header-color));}
-#me:hover{color: var(--bottom-head-bg);}
-article.me-page {
+
+#me {
+    color: var(--header-color);
+}
+
+#melink:hover {
+    color: var(--bottom-head-bg);
+}
+
+#me-page {
     background-color: var(--main-bg-color);
     height: 100vh;
     width: 100vw;
