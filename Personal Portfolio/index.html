@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stevers.Dev</title>
+    <link rel="stylesheet" href="Portfolio.css">
+    <script type="text/javascript" src="Portfolio.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div id="menu">
+            <svg role="button" id="exit-list" onclick="hideList()" height="35" width="35">
+                <line x1="5" y1="5" x2="30" y2="30" style="stroke:#000; stroke-width:5" />
+                <line x1="30" y1="5" x2="5" y2="30" style="stroke:#000; stroke-width:5" />
+            </svg>
+            <div id="items">
+                <!--thanks https://www.sitepoint.com/community/t/how-would-i-make-an-x-in-svg/277132-->
+                <a class="nav-links" href=#tech></a>Development</a>
+                <a class="nav-links" href=#me-page>Beyond the Screen</a>
+                <a class="nav-links" href=#portfolio>Portfolio</a>
+            </div>
+        </div>
+        <svg role="button" id="icon" onclick="displayList()" width="35" height="35">
+            <rect width="100%" height="5" y="5" fill="black" />
+            <rect width="100%" height="5" y="15" fill="black" />
+            <rect width="100%" height="5" y="25" fill="black" />
+        </svg>
+    </nav>
+    <header>
+        <h1>Stevers.Dev</h1>
+        <h2>Simple</h2>
+        <h2>Beautiful</h2>
+        <h2 class="light-head" class="body-link"><a class="light" class="body-link" href=#tech-head>Development</a></h2>
+    </header>
+    <main>
+        <article id="tech-page">
+            <section class="programming-skills">I enjoy building responsive websites using HTML and CSS and with a
+                smattering of Javascript. I have recently adopted CSS Grid as my layout of choice. Right now my learning
+                is mainly focused on building my Javascript knowledge. I am also becoming familiar with Git and Github,
+                mostly through their Visual Studio Code integrations.</section>
+            <img src="https://cdn.discordapp.com/attachments/515327418366427136/763009303564255232/HTML5.png"> <img
+                src="https://cdn.discordapp.com/attachments/515327418366427136/763009299425001512/CSS.png"><img
+                src="https://cdn.discordapp.com/attachments/515327418366427136/763009296791109673/JS.png">
+        </article>
+        <article id="me-page">
+            <h2 id="me-head"><a id="me" class="body-link" href=#me-page>Behind the Screen</a></h2>
+            <section class="about-me"><p>Hi, I'm Chris Stevers, an aspiring front-end developer in Southwestern Ontario. Growing up on a farm, I've learned that you really have to focus on the work that you accomplsih, not the hours put in and I believe that's a useful insight in any career. I pride myself in being reliable and hardworking in any job I take on . . . from building houses, to building websites.
+                </p><p>I began studying coding from the back-end side and had a tough time becoming enthused about it. When I discovered web development, though, I fell in love with it. As I continue to learn I hope to work my way towards greater backend knowlege.
+                </p>
+            <p>When I'm not coding, I'm probably farming, playing games, or studying an instrument.</p></section>
+        </article>
+        <article id="portfolio-page"><h2 id="portfolio-head"><a id="portfolio" class="body-link" href=#portfolio-page>Portfolio</a></h2></article>
+    </main>
+
+    <footer></footer>
+    <script type="text/javascript" src="Portfolio.js"></script>
+</body>
