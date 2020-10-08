@@ -8,7 +8,12 @@
     font-size: 100%;
     vertical-align: baseline;
     background: transparent;
+    text-decoration: none;
     /*Thanks stack overflow*/
+}
+
+a {
+    color: inherit;
 }
 
 :root {
@@ -20,8 +25,8 @@
 
 body {
     display: stretch;
-    grid-template-rows: 100vh 270vh;
-    grid-template-columns: 100vw;
+    grid-template-rows: minmax(autofill 85vh, ) auto;
+    grid-template-columns: 100%;
     align-items: center;
     justify-items: center;
     margin: 0px;
@@ -30,44 +35,38 @@ body {
 
 header {
     display: grid;
-    grid-template-rows: 55vh 15vh 15vh 15vh;
+    grid-template-rows: minmax(autofill, 55vh) minmax(autofill, 15vh) minmax(autofill, 15vh);
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100vw;
+    width: 100%;
     background-color: var(--main-bg-color);
     font-family: 'Montserrat', sans-serif;
     color: var(--header-color);
     overflow: visible;
+    min-height: 85vh;
 }
 
 h1 {
     font-size: clamp(3rem, 8vw, 4rem);
     text-align: center;
-    width: 100vw;
+    width: 100%;
     height: 55vh;
     line-height: 55vh;
 }
 
 h2 {
     font-size: clamp(2rem, 4vw, 4rem);
-    height: 15vh;
+    min-height: 60px;
+    min-height: 15vh;
+    align-items: center;
+    display: grid;
     text-align: center;
-    width: 100vw;
+    width: 100%;
     margin: 0px;
-    line-height: 15vh;
     font-family: 'Montserrat', sans-serif;
+    color: inherit;
+    overflow: hidden;
 }
-.body-link {
-    text-decoration: none;
-}
-
-.light{
-    
-    color: var(--bottom-head-color);
-}
-.light-head{background-color: var(--bottom-head-bg);}
-
 nav {
     position: fixed;
     top: 5px;
@@ -102,7 +101,7 @@ nav {
 
 @media screen and (max-width: 500px) {
     #items {
-        grid-template-columns: 100vw;
+        grid-template-columns: 100%;
         grid-template-rows: 1fr 1fr 1fr;
         height: 100vh;
         margin: 0px;
@@ -124,64 +123,92 @@ svg:hover {
 }
 
 main {
-    height: 270vh;
+    height: auto;
     width: 100%;
     display: grid;
-    grid-template-rows: minmax(350px, 70vh) 85vh 85vh;
+    grid-template-rows: minmax(autofill, 85vh) minmax(autofill, 85vh) 85vh;
     background-color: white;
 }
 
 #tech-page {
     display: grid;
-    grid-template-rows: minmax(250px, 30vh) minmax(100px, 30vh) ;
-    grid-template-columns: 30vw 30vw 30vw;
+    min-height: 85vh;
+    width: 90%;
+    grid-template-rows: 15vw minmax(autofill, 40vh) minmax(auto, 30vh);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "h2 h2 h2" "p p p" "html css js";
+        justify-content: center;
     justify-items: center;
-    justify-content: center;
-    align-content: start;
-    grid-template-areas: "p p p" "html css js";
+    justify-self: center;
+    background-color: var(--bottom-head-bg);
+    color: var(--bottom-head-color);
     object-fit: contain;
+}
+
+h2.tech-head {
+    grid-area: h2;
+    height: 15vw;
 }
 
 section.programming-skills {
     grid-area: p;
     line-height: 150%;
-    background-color: var(--bottom-head-bg);
-    color: var(--bottom-head-color);
+    font-family: Raleway, sans-serif;
+    font-weight: 400;
+    font-size: clamp(1em, 3vw, 1.75em);
+    min-height: 40vw;
+}
+
+img {
+    width: 10vw;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    align-self: center;
+}
+
+#me-page {
+    display: grid;
+    grid-template-rows: auto minmax(autofill 70vh);
+    grid-template-columns: 90%;
+    align-content: start;
+    justify-items: center;
+    justify-content: center;
+    background-color: var(--main-bg-color);
+    color: var(--header-color);
+    min-height: 85vh;
+}
+
+p {
+    padding: 5px;
+}
+
+.about-me {
+    justify-self: center;
+    color: var(--header-color);
     font-family: Raleway, sans-serif;
     font-weight: 400;
     font-size: clamp(1em, 3vw, 1.75em);
 }
 
-img {
-    width: 10vw;
+#portfolio-page {
+    min-height: 80vh;
+    width: 100%;
+    background-color: var(--bottom-head-bg);
+    color: var(--bottom-head-color);
 }
 
-#me {
+.dark-theme {
+    background-color: var(--main-bg-color);
     color: var(--header-color);
-}
-
-#melink:hover {
-    color: var(--bottom-head-bg);
-}
-
-#me-page {
-    display: grid;
-    height: 85vh;
-    grid-template-rows: 15vh 70vh;
-    grid-template-columns: 90vw;
-    justify-items: center;
-    justify-content: center;
-    align-content: stretch;
-    object-fit: contain;
-background-color: var(--main-bg-color);
-}
     
+}
 
-.about-me{justify-self: center;
-    color: var(--header-color);
+footer {
+    display: grid;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
     font-family: Raleway, sans-serif;
     font-weight: 400;
-    font-size: clamp(1em, 3vw, 1.75em);}
-    p{padding: 20px;}
-    #portfolio-page{height: 100vh;
-    width: 100vh;}
+    min-height: 20vh;
+}
