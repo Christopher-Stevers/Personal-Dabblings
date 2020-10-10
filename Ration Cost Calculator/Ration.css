@@ -1,0 +1,122 @@
+
+* {
+  box-sizing: border-box;
+}
+:root {
+  --main-bg-color: #f59c98;
+  --section-bg-color: #f5cb98;
+  --field-bg-color: #dfdfff;
+  --border-color: #6b464c;
+  --hover-color: #ffffff;
+}
+body {
+  background-color: var(--main-bg-color);
+}
+section,
+header {
+  background-color: var(--section-bg-color);
+  display: flex;
+  justify-content: center;
+  font-size: calc(4vw+14px);
+  font-family: arial;
+  padding: 5px 20px 5px 20px;
+  border-radius: 80px;
+  border-style: solid;
+  border-color: var(--border-color);
+  border-width: 15px;
+  width: 80%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+p {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 500px;
+  flex-wrap: wrap;
+  
+}
+
+.submit-container {
+  justify-content: flex-end;
+  width: 100%;
+}
+.submit-button {
+  background-color: var(--field-bg-color);
+  outline: none;
+  border-style: solid;
+  border-color: var(--border-color);
+  border-width: 3px;
+  border-radius: 40px;
+  padding: 10px;
+  min-width: 20%;
+}
+.submit-button:hover {
+  background-color: var(--hover-color);
+  cursor: pointer;
+}
+
+.form-css {
+  border-radius: 10px;
+  outline: none;
+  background-color: var(--field-bg-color);
+  padding: 3px;
+  margin: 0px 10px 0px 10px;
+  width: 10%;
+  min-width: 100px;
+  border-style: solid;
+  border-color: var(--border-color);
+  border-width: 3px;
+  font-size: calc(3vw+14px);
+  height: 30px;
+}
+.form-css:hover {
+  background-color: var(--hover-color);
+}
+label {
+  min-width: 200px;
+  width: 10%;
+}
+@media only screen and (max-width: 450px) {
+  section {
+    border-width: 10px 0px 0px 0px;
+    margin: auto;
+    width: 100%;
+    border-radius: 0px;
+    display: flex;
+  }
+  header {
+    margin: auto;
+    width: 100%;
+    border-radius: 0px;
+    border-width: 0px;
+    font-size: 14px;
+  }
+  body {
+    background-color: var(--section-bg-color);
+  }
+
+  .submit-button {
+    justify-content: flex-start;
+  }
+
