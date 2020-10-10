@@ -32,6 +32,7 @@ a:link {
   font-family: arial;
   padding: 15px;
 }
+a:visited{color: black;}
 
 a:hover {
   background-color: black;
