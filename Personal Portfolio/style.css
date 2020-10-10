@@ -9,6 +9,7 @@
     vertical-align: baseline;
     background: transparent;
     text-decoration: none;
+    border: solid black 1px;
     /*Thanks stack overflow*/
 }
 
@@ -24,8 +25,8 @@ a {
 }
 
 body {
-    display: stretch;
-    grid-template-rows: minmax(autofill 85vh, ) auto;
+    display: grid;
+    grid-template-rows: minmax(auto, 85vh) auto;
     grid-template-columns: 100%;
     align-items: center;
     justify-items: center;
@@ -35,7 +36,7 @@ body {
 
 header {
     display: grid;
-    grid-template-rows: minmax(autofill, 55vh) minmax(autofill, 15vh) minmax(autofill, 15vh);
+    grid-template-rows: minmax(100px, 55vh) minmax(50px, 15vh) minmax(50px, 15vh);
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -44,6 +45,7 @@ header {
     color: var(--header-color);
     overflow: visible;
     min-height: 85vh;
+    min-height: 200px;
 }
 
 h1 {
@@ -55,8 +57,8 @@ h1 {
 }
 
 h2 {
-    font-size: clamp(2rem, 4vw, 4rem);
-    min-height: 60px;
+    font-size: clamp(1.5rem, 3.5vw, 3rem);
+    min-height: 50px;
     min-height: 15vh;
     align-items: center;
     display: grid;
@@ -134,10 +136,9 @@ main {
     display: grid;
     min-height: 85vh;
     width: 90%;
-    grid-template-rows: 15vw minmax(autofill, 40vh) minmax(auto, 30vh);
+    grid-template-rows: 15vh minmax(autofill, 40vh) minmax(autofill, 30vh);
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "h2 h2 h2" "p p p" "html css js";
-        justify-content: center;
     justify-items: center;
     justify-self: center;
     background-color: var(--bottom-head-bg);
@@ -146,24 +147,22 @@ main {
 }
 
 h2.tech-head {
+    height: 15vh;
+    min-height: 50px;
     grid-area: h2;
-    height: 15vw;
+    display: grid;
 }
 
-section.programming-skills {
+.programming-skills {
     grid-area: p;
-    line-height: 150%;
-    font-family: Raleway, sans-serif;
-    font-weight: 400;
-    font-size: clamp(1em, 3vw, 1.75em);
-    min-height: 40vw;
+    
 }
 
 img {
     width: 10vw;
+    min-width: 35px;
     grid-row-start: 3;
     grid-row-end: 3;
-    align-self: center;
 }
 
 #me-page {
@@ -179,24 +178,32 @@ img {
 }
 
 p {
+    font-family: Raleway, sans-serif;
+    font-weight: 400;
+    font-size: clamp(1em, 3vw, 1.75em);
+    
     padding: 5px;
+}
+
+
 }
 
 .about-me {
     justify-self: center;
     color: var(--header-color);
-    font-family: Raleway, sans-serif;
-    font-weight: 400;
-    font-size: clamp(1em, 3vw, 1.75em);
+    
 }
 
 #portfolio-page {
     min-height: 80vh;
+    min-height: 200px;
     width: 100%;
     background-color: var(--bottom-head-bg);
     color: var(--bottom-head-color);
 }
-
+.portfolio-content{display:grid;
+grid-template-rows: 1fr 1fr 1fr;
+grid-template-columns: 1fr 1fr 1fr;}
 .dark-theme {
     background-color: var(--main-bg-color);
     color: var(--header-color);
