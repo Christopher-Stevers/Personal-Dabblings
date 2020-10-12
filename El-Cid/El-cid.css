@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Prociono&display=swap");
+#main{
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  background-image: url(https://cdn.discordapp.com/attachments/515327418366427136/756574842651672616/fleur_de_lis.png);
+  background-size: 175px;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-template-areas: "h1 div" 
+                       "article article"
+                       "a a";
+  background-attachment: fixed;
+  column-gap: 2rem;
+  }
+#title{font-family: "Prociono";
+  background: to top, white, transparent 90%;
+  grid-area: h1;
+  padding: 10px;
+  justify-self: center;
+  align-self: center;
+  font-size: 6vw;
+  border-radius: 10px;
+   background-color: white;
+  box-shadow: white 0px 0px 50px 50px;
+  
+  
+  }
+.border-div{border: solid black 7.5px;
+display: grid;
+justify-items: center;
+ background-color: white;
+  box-shadow: 0px 0px 2px 1px black, 0px 0px 20px 20px white;
+grid-area: div;
+margin: 20px; }
+#img-div{
+  max-width: 340px;
+  display: grid;
+  border: double black 5px;
+  border-radius: 2px;
+  margin: 2px;
+  justify-items: center;
+  padding: 20px;
+  background-color: white;
+object-fit: contain;
+text-align: center;}
+#image{
+width: 100%;
+  display: block;
+max-width: 300px;
+  max-height: 400px;
+  min-width: 50px;
+  margin: auto;
+overflow: hidden;
+box-shadow: 0px 0px 5px 1px black }
+
+#img-caption{font: arial;
+  overflow: hidden;
+  font-size: 2.5vw;
+}
+#tribute-info{
+grid-area: article;
+text-indent: 50px;
+justify-self: center;
+margin-left: 15%;
+  margin-top: 50px;
+  
+  margin-right: 15%;
+  width: 80%;
+ background-color: white;
+  box-shadow: white 0px 0px 20px 20px;
+  font-size: 3vw;
+  
+  padding: 20px;
+  font-family: georgia;
+  line-height: 1.5;}
+#tribute-link{color: white;
+background-color: #003399;
+grid-area: a;
+width: 100%;
+height: 10vh;
+  display: grid;
+  align-items: center;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+#tribute-link:hover{color: #DDFFFF;}
