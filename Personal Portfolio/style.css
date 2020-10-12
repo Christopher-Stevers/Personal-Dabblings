@@ -9,7 +9,6 @@
     vertical-align: baseline;
     background: transparent;
     text-decoration: none;
-    border: solid black 1px;
     /*Thanks stack overflow*/
 }
 
@@ -69,6 +68,7 @@ h2 {
     color: inherit;
     overflow: hidden;
 }
+
 nav {
     position: fixed;
     top: 5px;
@@ -155,7 +155,6 @@ h2.tech-head {
 
 .programming-skills {
     grid-area: p;
-    
 }
 
 img {
@@ -181,17 +180,12 @@ p {
     font-family: Raleway, sans-serif;
     font-weight: 400;
     font-size: clamp(1em, 3vw, 1.75em);
-    
     padding: 5px;
-}
-
-
 }
 
 .about-me {
     justify-self: center;
     color: var(--header-color);
-    
 }
 
 #portfolio-page {
@@ -201,13 +195,16 @@ p {
     background-color: var(--bottom-head-bg);
     color: var(--bottom-head-color);
 }
-.portfolio-content{display:grid;
-grid-template-rows: 1fr 1fr 1fr;
-grid-template-columns: 1fr 1fr 1fr;}
+
+.portfolio-content {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 .dark-theme {
     background-color: var(--main-bg-color);
     color: var(--header-color);
-    
 }
 
 footer {
